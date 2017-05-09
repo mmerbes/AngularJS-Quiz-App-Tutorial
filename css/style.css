@@ -1,0 +1,34 @@
+.well-image {
+  width: 100%;
+  height: 162px;
+}
+
+.top-buffer {
+  margin-top: 30px;
+}
+
+.answer{
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+}
+.answer:hover{
+    cursor: pointer;
+}
+
+.image-answer{
+    cursor: pointer;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.image-answer img{
+    width: 100%;
+    height: auto;
+}
+
+.image-selected {
+  border: 3px solid rgba(86,175,220,0.8);
+}
