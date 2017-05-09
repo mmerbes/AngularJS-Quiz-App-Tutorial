@@ -25,7 +25,7 @@
             this.error = true;
           }
 
-          if(DataService.quizQuestions[this.activeQuestion].selected === null){
+          if(dataService.quizQuestions[this.activeQuestion].selected === null){
             breakOut = true;
           }
         }
@@ -36,12 +36,13 @@
 
     this.questionAnswered = function() {
       var quizLength = dataService.quizQuestions.length;
+
       if(dataService.quizQuestions[this.activeQuestion].selected !== null) {
         numQuestionsAnswered++;
 
         if(numQuestionsAnswered >= quizLength){
           for(var i = 0; i < quizLength; i++){
-              if(DataService.quizQuestions[i].selected === null){
+              if(dataService.quizQuestions[i].selected === null){
                   setActiveQuestion(i);
                   return;
               }

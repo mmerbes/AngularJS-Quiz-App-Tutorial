@@ -12,7 +12,7 @@
 
         this.activeQuestion = 0;
 
-        this.getAnswerClass = function() {
+        this.getAnswerClass = function(index) {
           if(index === quizMetrics.correctAnswers[this.activeQuestion]) {
             return 'bg-success';
           }else if(index === dataService.quizQuestions[this.activeQuestion].selected) {
@@ -26,6 +26,18 @@
 
         this.calculatePerc = function() {
           return quizMetrics.numCorrect / dataService.quizQuestions.length * 100;
+        }
+
+        this.reset = function() {
+          quizMetrics.changeState("results",false);
+          quizMetrics.numCorrect = 0;
+
+          for(var i = 0; i < DataService.quizQuestions.length; i++){
+            var data = DataService.quizQuestions[i]; //binding the current question to data to keep code clean
+
+            data.selected = null;
+            data.correct = null;
+          }
         }
     }
 })();

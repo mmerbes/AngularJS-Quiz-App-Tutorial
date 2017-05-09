@@ -32,3 +32,10 @@
 .image-selected {
   border: 3px solid rgba(86,175,220,0.8);
 }
+
+.image-answer.bg-success{
+    border: 3px solid #5ea640;
+}
+.image-answer.bg-danger{
+    border: 3px solid #b74848;
+}
